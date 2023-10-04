@@ -26,7 +26,6 @@ router.beforeEach((to, from, next) => {
     if (token && name) {
       return next({ name: "admin" });
     } else {
-      // Allow navigation to proceed
       next();
     }
   }

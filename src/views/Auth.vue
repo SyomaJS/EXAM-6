@@ -99,6 +99,7 @@ const submit = (e) => {
     })
     .then((res) => {
       localStorage.setItem("token", res.data.token);
+      localStorage.setItem("roles", res.data.roles);
       myRoles.value = res.data.roles;
       rolesModal.value.openModal(res.data.roles);
     })
