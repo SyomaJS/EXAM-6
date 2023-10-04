@@ -10,10 +10,10 @@
       <div
         v-for="(product, index) in products"
         :key="index"
-        class="w-80 bg-white shadow-lg rounded-lg overflow-hidden my-4"
+        class="w-80 bg-white shadow-lg p-5 rounded-lg overflow-hidden my-4"
       >
         <div class="my_class" @click="oneProduct(product._id)">
-          <div class="flex items-center px-6 py-3 bg-gray-900">
+          <div class="flex w-full items-center px-6 py-3 bg-gray-900">
             <h1 class="mx-3 text-white font-semibold text-lg">
               {{ product.name }}
             </h1>
@@ -59,6 +59,7 @@ import toastify from "@/components/plugins/Notification";
 import product_modal from "@/components/pages/product/CreateProductModal.vue";
 import http from "@/components/plugins/api";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 
 const productsModal = ref();
